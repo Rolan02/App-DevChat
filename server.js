@@ -37,6 +37,7 @@ router.post('/message',function(req,res) {
     
     
 });
+app.use('/app',express.static('public'));
 
 app.listen(3001);
 console.log('La aplicacion esta escuchando en el puerto Localhost:3001');
