@@ -2,8 +2,12 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+//Atraves de un objeto define todas las propiedades y tipos que necesitemos
 const mySchema = new Schema({
-    user: String,
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User',
+    },
     message:{
         type:String,
         required: true,
